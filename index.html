@@ -1,0 +1,50 @@
+<!-- 声明这是一个 HTML5 网页文件，告诉浏览器用最新的标准来解析这个页面 -->
+<!doctype html>
+
+<!-- 网页的根标签，lang="zh-CN" 表示网页语言是简体中文，这对搜索引擎和屏幕阅读器很重要 -->
+<html lang="zh-CN">
+
+  <!-- head 区域：存放网页的“元信息”，这些内容不会直接显示在页面上，但对浏览器、搜索引擎非常关键 -->
+  <head>
+
+    <!-- 指定字符编码为 UTF-8，这样中文、英文、emoji 等各种文字都能正常显示 -->
+    <meta charset="UTF-8" />
+
+    <!-- 设置浏览器标签页上的小图标（favicon），这里用了一段特殊的数据编码，直接内嵌了一个 ⚡ emoji 作为图标 -->
+    <!-- 如果没有这一行，浏览器会显示一个空白的默认图标 -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+
+    <!-- 视口（viewport）设置：让网页在手机上也能自适应缩放，width=device-width 表示页面宽度跟随设备屏幕宽度 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 网页描述：搜索引擎（如 Google、百度）在搜索结果中会显示这段文字，也是别人分享链接时的预览摘要 -->
+    <meta name="description" content="ByteKt 的技术博客 - 记录技术学习与思考" />
+
+    <!-- 提前连接到 Google 字体服务器，这样后续加载字体时速度会更快（相当于先打通电话，再开口说话） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- 提前连接到 Google 字体的静态资源服务器，设置 crossorigin 表示可以跨域访问 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- 加载 Google 提供的两种字体：Inter（英文）和 Noto Sans SC（简体中文），多种粗细用于不同的文字层级 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- 网页标题：显示在浏览器标签页上的文字，也是搜索引擎结果中显示的标题 -->
+    <title>ByteKt - 技术博客</title>
+
+  </head>
+
+  <!-- body 区域：这里是真正会在页面上展示的内容 -->
+  <body>
+
+    <!-- 一个空的 div 容器，id 是 "root"。React 框架会把自己的所有内容动态注入到这个 div 里 -->
+    <!-- 简单理解：这个 div 就是一个“插槽”，整个网站的所有页面内容都会被渲染（生成）到这里面 -->
+    <div id="root"></div>
+
+    <!-- 加载项目的入口 JavaScript 文件（main.tsx），type="module" 表示使用现代 ES 模块语法 -->
+    <!-- React 应用程序从这行代码开始启动，它会接管上面的 <div id="root"> 并生成完整的网页 -->
+    <script type="module" src="/src/main.tsx"></script>
+
+  </body>
+
+</html>

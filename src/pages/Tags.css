@@ -1,0 +1,109 @@
+.tags-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.tags-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tags-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.tags-header p {
+  color: var(--text-tertiary);
+  font-size: 1rem;
+}
+
+.tags-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.tag-cloud-item {
+  padding: 0.6rem 1.5rem;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.tag-cloud-item:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.tag-cloud-item.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.tag-detail {
+  margin-top: 0.5rem;
+}
+
+.tag-detail-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tag-highlight {
+  color: var(--accent);
+}
+
+.clear-filter {
+  margin-left: auto;
+  font-size: 0.825rem;
+  color: var(--text-tertiary);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+
+.clear-filter:hover {
+  color: var(--accent);
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+.tags-placeholder {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-tertiary);
+}
+
+.placeholder-icon {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 640px) {
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+}
